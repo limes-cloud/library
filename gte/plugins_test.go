@@ -1,4 +1,4 @@
-package get
+package gte
 
 import (
 	"fmt"
