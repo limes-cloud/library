@@ -101,5 +101,4 @@ func TestErrorPlugin_Register(t *testing.T) {
 	plugin := NewGlobalGormErrorPlugin()
 	//db := Connect(plugin)
 	plugin.Register(UserTestRef{})
-	fmt.Println("==")
 }

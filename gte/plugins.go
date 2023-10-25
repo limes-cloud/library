@@ -19,6 +19,7 @@ type GormErrorPlugin interface {
 	Name() string
 	Initialize(*gorm.DB) error
 	Register(object TableComment)
+	options() *options
 }
 
 type TableComment interface {
@@ -155,6 +156,10 @@ func (ep *ErrorPlugin) Register(object TableComment) {
 		}
 	}
 
+}
+
+func (ep *ErrorPlugin) options() *options {
+	return ep.opts
 }
 
 // addInfo 重db中提取信息
